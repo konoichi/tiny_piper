@@ -146,7 +146,7 @@ venv.bak/
 
 # Spyder project settings
 .spyderproject
-.spyproject
+x.spyproject
 
 # Rope project settings
 .ropeproject
@@ -203,6 +203,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 # tts modelle
-models
-
+*.onnx
 .venv
