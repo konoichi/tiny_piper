@@ -1,0 +1,81 @@
+site_name: Piper TTS Server Documentation
+site_description: Documentation for the Piper TTS Server
+site_author: Stephan Wilkens / Abby-System
+copyright: Copyright &copy; 2025 Abby-System
+
+# Repository
+repo_name: Piper TTS Server
+repo_url: https://github.com/yourusername/piper-tts-server
+edit_uri: edit/main/docs/
+
+# Theme configuration
+theme:
+  name: material
+  language: en
+  palette:
+    primary: indigo
+    accent: amber
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # Navigation structure
+
+nav:
+  - Home: index.md
+  - Installation:
+      - Quick Start: installation/quickstart.md
+      - Docker Installation: installation/docker.md
+      - Manual Installation: installation/manual.md
+  - Configuration:
+      - Server Configuration: configuration/server.md
+      - Model Configuration: configuration/models.md
+      - Security Settings: configuration/security.md
+  - API Reference:
+      - Endpoints: api/endpoints.md
+      - Examples: api/examples.md
+  - Frontend:
+      - Usage Guide: frontend/usage.md
+      - Customization: frontend/customization.md
+  - Development:
+      - Architecture: development/architecture.md
+      - Contributing: development/contributing.md
+      - Testing: development/testing.md
+  - Troubleshooting: troubleshooting.md
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Extra settings
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/piper-tts-server
+  version:
+    provider: mike
